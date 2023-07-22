@@ -94,7 +94,6 @@ img {
 
 .team {
     background-color: var(--light);
-    padding: 120px 0;
 }
 
 
@@ -102,12 +101,12 @@ img {
 /* headers */
 
 .hero-title {
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--white-background);
     text-align: center;
-    margin-bottom: 42px;
+    margin-bottom: 72px;
     max-width: 496px;
 }
 
@@ -123,11 +122,12 @@ img {
 
 
 .top-header {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--dark);
+    text-transform: capitalize;
 }
 
 .footer-paragraph {
@@ -143,18 +143,16 @@ img {
 
 .hero {
     background-color: var(--dark);
-    padding: 188px 0;
-    margin: 0 auto;
-    max-width: 1440px;
+    max-width: 428px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/index/people-office-bcg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0 auto;
 }
 
 .footer {
     background-color: var(--dark);
-    padding: 100px 156px;
 }
 
 
@@ -224,27 +222,52 @@ img {
 /* module 3 index*/
 
 .container {
-    width: 1158px;
-    padding: 0 15px;
+    max-width: 428px;
+    padding: 96px 16px;
     margin: 0 auto;
 }
 
+@media screen and (min-width: 428px) {
+    .container {
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 736px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 120px 15px;
+    }
+
+    .container-skills {
+        padding-bottom: 0;
+    }
+}
+
 .header {
-    padding: 24px 0;
     border-bottom: 1px solid var(--accent);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.skills {
-    padding: 120px 0;
+
+.container-skills {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .skills-header {
     margin-bottom: 8px;
+    text-align: center;
 }
 
-.wedoing {
-    padding-bottom: 120px;
+.container-wedoing {
+    display: none;
 }
 
 .wedoing-header {
@@ -258,15 +281,17 @@ img {
 .team-header-name {
     margin-bottom: 8px;
     text-align: center;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.4px;
 }
 
 .team-paragraph {
     text-align: center;
     margin-bottom: 8px;
-}
-
-.logo-footer {
-    display: inline-block;
 }
 
 /* module 3 portfolio */
@@ -299,7 +324,7 @@ img {
 }
 
 .header-list {
-    display: flex;
+    display: none;
     gap: 40px;
 }
 
@@ -312,13 +337,15 @@ img {
 
 .header-contact-list {
     gap: 40px;
-    display: flex;
+    display: none;
     align-items: center;
 }
 
 .header-container {
     display: flex;
     align-items: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
 }
 
 /* hero section */
@@ -327,6 +354,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0;
+    padding: 112px 54px;
 }
 
 
@@ -334,11 +363,12 @@ img {
 
 .list-skills {
     display: flex;
-    gap: 24px;
+    gap: 72px;
+    flex-wrap: wrap;
 }
 
 .item-skills {
-    flex-basis: calc((100% - 3 * 24px) / 4)
+    /* flex-basis: calc((100% - 3 * 24px) / 4) */
 }
 
 /* wedoing section */
@@ -356,12 +386,14 @@ img {
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
 }
 
 .team-item {
     background-color: var(--white-background);
-    width: calc((100% - 72px) / 4);
+    /* width: calc((100% - 72px) / 4); */
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
@@ -371,7 +403,7 @@ img {
 }
 
 .container-members {
-    padding: 32px 16px;
+    padding: 32px 0;
     max-width: 264px;
 }
 
@@ -429,7 +461,7 @@ img {
 /* svg icons */
 
 .container-skills-icons {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     height: 112px;
@@ -469,12 +501,17 @@ img {
     fill: var(--light);
 }
 
-.footer-first-container {
+.footer-main-container {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 72px;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
     flex-direction: column;
-    max-width: 264px;
-    margin-right: 120px;
 }
 
 .soc-footer-paragraph {
@@ -513,18 +550,13 @@ img {
     fill: var(--light);
 }
 
-.footer-logo-container {
+.footer-icons-container {
     display: flex;
-    align-items: baseline;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* customers section */
-
-.customers-section {
-    padding: 120px 0;
-}
 
 .title-customers {
     font-size: 36px;
@@ -536,12 +568,15 @@ img {
 
 .list-customers {
     display: flex;
-    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
     list-style: none;
 }
 
 .item-customers {
-    width: calc((100% - 120px) / 6);
+    /* width: calc((100% - 120px) / 6); */
+    width: 190px;
     height: 88px;
 }
 
@@ -824,10 +859,10 @@ img {
 }
 
 .footer-container-form {
-    margin-left: 80px;
-    width: 453px;
-    height: 80px;
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-form-header {
@@ -838,10 +873,6 @@ img {
     color: var(--white-background);
 }
 
-.footer-container-form {
-    display: flex;
-}
-
 .footer-form-paragraph {
     margin-bottom: 16px;
     font-weight: 500;
@@ -849,11 +880,10 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--white-background);
-    position: relative;
 }
 
 .footer-input {
-    width: 264px;
+    width: 398px;
     height: 40px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -864,9 +894,15 @@ img {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     color: var(--white-background);
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0; */
+}
+
+@media screen and (min-width: 320px) and (max-width: 427px) {
+    .footer-input {
+        width: 288px;
+    }
 }
 
 .footer-input::placeholder {
@@ -882,6 +918,7 @@ img {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     padding: 8px 24px;
+    margin-top: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--white-background);
@@ -890,9 +927,9 @@ img {
     border: none;
     border-radius: 4px;
     background-color: var(--primary-brand);
-    position: absolute;
+    /* position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 0; */
 }
 
 .subscribe-footer-img {
@@ -902,7 +939,9 @@ img {
 
 .footer-form {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-container-form {

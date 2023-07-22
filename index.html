@@ -19,10 +19,11 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header-container">
         <nav class="header-nav">
           <a class="logo link logo-header" href="/"
             >Web<span class="logo-dark">Studio</span>
@@ -172,7 +173,7 @@
                 class="team-pic"
               />
               <div class="container container-members">
-                <h3 class="team-header-name top-header">Mark Guerrero</h3>
+                <h3 class="team-header-name">Mark Guerrero</h3>
                 <p class="team-paragraph text">Product Designer</p>
                 <ul class="soc-team-list list">
                   <li class="soc-team-item">
@@ -214,7 +215,7 @@
                 class="team-pic"
               />
               <div class="container container-members">
-                <h3 class="team-header-name top-header">Tom Ford</h3>
+                <h3 class="team-header-name">Tom Ford</h3>
                 <p class="team-paragraph text">Frontend Developer</p>
                 <ul class="soc-team-list list">
                   <li class="soc-team-item">
@@ -256,7 +257,7 @@
                 class="team-pic"
               />
               <div class="container container-members">
-                <h3 class="team-header-name top-header">Camila Garcia</h3>
+                <h3 class="team-header-name">Camila Garcia</h3>
                 <p class="team-paragraph text">Marketing</p>
                 <ul class="soc-team-list list">
                   <li class="soc-team-item">
@@ -298,7 +299,7 @@
                 class="team-pic"
               />
               <div class="container container-members">
-                <h3 class="team-header-name top-header">Daniel Wilson</h3>
+                <h3 class="team-header-name">Daniel Wilson</h3>
                 <p class="team-paragraph text">UI Designer</p>
                 <ul class="soc-team-list list">
                   <li class="soc-team-item">
@@ -388,8 +389,8 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-logo-container">
-        <div class="footer-first-container">
+      <div class="container footer-main-container">
+        <div class="footer-logo-container">
           <a class="logo-footer logo link" href="/"
             >Web<span class="logo-footer logo-white">Studio</span>
           </a>
@@ -437,11 +438,21 @@
           <p class="footer-form-paragraph">Subscribe</p>
           <form class="footer-form">
             <label for="email" class="footer-label">
-              <input type="email" name="email" placeholder="E-mail" id="email" class="footer-input">
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                id="email"
+                class="footer-input"
+              />
             </label>
-            <button type="submit" class="footer-form-button">Subscribe
+            <button type="submit" class="footer-form-button">
+              Subscribe
               <svg class="subscribe-footer-img" width="24" height="24">
-                <use class="footer-airplane" href="./images/icons.svg#icon-airplane"></use>
+                <use
+                  class="footer-airplane"
+                  href="./images/icons.svg#icon-airplane"
+                ></use>
               </svg>
             </button>
           </form>
@@ -459,7 +470,6 @@
 
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="modal-form">
-
           <div class="modal-container">
             <label for="user-name" class="label-modal">Name</label>
             <div class="svg-label-modal">
@@ -473,9 +483,9 @@
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
-            </div>
+          </div>
 
-            <div class="modal-container">
+          <div class="modal-container">
             <label for="user-phone" class="label-modal">Phone</label>
             <div class="svg-label-modal">
               <input
@@ -488,9 +498,9 @@
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
-            </div>
+          </div>
 
-            <div class="modal-container">
+          <div class="modal-container">
             <label for="user-email" class="label-modal">Email</label>
             <div class="svg-label-modal">
               <input
@@ -503,33 +513,40 @@
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
-            </div>
+          </div>
 
-            <div class="textarea-container">
-              <label for="user-comment" class="label-modal">Comment</label>
-              <textarea 
+          <div class="textarea-container">
+            <label for="user-comment" class="label-modal">Comment</label>
+            <textarea
               class="user-textarea"
-              name="user-comment" 
-              id="user-comment" 
-              placeholder="Text input" 
-              cols="30" 
-              rows="10"></textarea>
-            </div>
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
 
-            <div class="modal-checkbox-container">
-              <input type="checkbox" id="user-privacy" value="true" name="user-privacy" class="modal-checkbox-input visually-hidden">
-              <label for="user-privacy" class="modal-checkbox-label">
-                <span class="mod-checkbox-span">
-                  <svg width="10" height="8" class="modal-svg-vector">
-                    <use href="./images/icons.svg#icon-vector"></use>
-                  </svg>
-                </span>
-                I accept the terms and conditions of the
-                <a href="" class="modal-privacy">Privacy Policy</a>
-              </label>
-            </div>
+          <div class="modal-checkbox-container">
+            <input
+              type="checkbox"
+              id="user-privacy"
+              value="true"
+              name="user-privacy"
+              class="modal-checkbox-input visually-hidden"
+            />
+            <label for="user-privacy" class="modal-checkbox-label">
+              <span class="mod-checkbox-span">
+                <svg width="10" height="8" class="modal-svg-vector">
+                  <use href="./images/icons.svg#icon-vector"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="modal-privacy">Privacy Policy</a>
+            </label>
+          </div>
 
-            <button type="submit" class="modal-send">Send</button>
+          <button type="submit" class="modal-send">Send</button>
         </form>
       </div>
     </div>
