@@ -608,6 +608,7 @@ img {
 
     .hero {
         padding: 188px 0;
+        max-width: 1440px;
     }
 
     .container-hero {
